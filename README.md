@@ -19,3 +19,9 @@ Dies ist die Repository für das Studienprojekt I an der HWR. Ziel des Projekts 
 │   └── ...
 └── Sonstiges
 ```
+
+## Anleitung zum Ausführen
+1. Python
+   - Python Interpreter installieren (wenn nicht schon vorhanden)
+3. Golang
+   - Ordner in IDE, wie GoLand oder Visual Studio Code
