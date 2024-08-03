@@ -1,5 +1,9 @@
+import time
 import numpy as np
 from algorithmen import determinant, inverse, multiplyMatrix, initRandArray, transpose, gaussJordanInverse
+
+# start timer for execution time
+start = time.time()
 
 # Create a 3x3 random matrix
 matrix = np.array(initRandArray(3))
@@ -46,3 +50,7 @@ inv_difference = np.abs(inv - gauss_jordan_inv)
 print("\nDifference between the two inverse methods:")
 print(inv_difference)
 print("Maximum difference:", np.max(inv_difference))
+
+# end timer for execution time
+end = time.time()
+print(f"Execution time: {end - start} seconds")
