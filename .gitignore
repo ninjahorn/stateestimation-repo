@@ -1,67 +1,67 @@
 # Byte-compiled / optimized / DLL files
-   __pycache__/
-   *.py[cod]
-   *$py.class
+__pycache__/
+*.py[cod]
+*$py.class
 
-   # C extensions
-   *.so
+# C extensions
+*.so
 
-   # Distribution / packaging
-   .Python
-   build/
-   develop-eggs/
-   dist/
-   downloads/
-   eggs/
-   .eggs/
-   lib/
-   lib64/
-   parts/
-   sdist/
-   var/
-   wheels/
-   *.egg-info/
-   .installed.cfg
-   *.egg
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-   # PyInstaller
-   *.manifest
-   *.spec
+# PyInstaller
+*.manifest
+*.spec
 
-   # Installer logs
-   pip-log.txt
-   pip-delete-this-directory.txt
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-   # Unit test / coverage reports
-   htmlcov/
-   .tox/
-   .coverage
-   .coverage.*
-   .cache
-   nosetests.xml
-   coverage.xml
-   *.cover
-   .hypothesis/
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
 
-   # Jupyter Notebook
-   .ipynb_checkpoints
+# Jupyter Notebook
+.ipynb_checkpoints
 
-   # pyenv
-   .python-version
+# pyenv
+.python-version
 
-   # Environment directories
-   .env
-   .venv
-   env/
-   venv/
-   ENV/
+# Environment directories
+.env
+.venv
+env/
+venv/
+ENV/
 
-   # IDE-specific files
-   .vscode/
-   .idea/
-   *.swp
-   *.swo
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
 
-   # Operating system files
-   .DS_Store
-   Thumbs.db
+# Operating system files
+.DS_Store
+Thumbs.db
