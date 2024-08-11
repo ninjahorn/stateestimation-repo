@@ -1,6 +1,8 @@
 import random
 import numpy as np
 from multiprocessing import Pool, cpu_count
+import time
+
 
 def initRandMatrixSequential(sizeX, sizeY=None):
     if sizeY is None:
@@ -28,16 +30,27 @@ def generateLine(sizeY):
 def initRandMatrixParallel(sizeX, sizeY=None):
     if sizeY is None:
         sizeY = sizeX
-
     with Pool(processes=cpu_count()) as pool:
-        matrix = pool.map(lambda _: generateLine(sizeY), range(sizeX))
-    
+        matrix = pool.starmap(generateLine, [(sizeY,)] * sizeX)
     return matrix
 
-matrix1 = np.array(initRandMatrixSequential(8))
-print(matrix1)
 
-matrix2 = np.array(initRandMatrixParallel(8))
-print(matrix2)
+def compareImplementations(size):
+    start_time = time.time()
+    matrix1 = np.array(initRandMatrixSequential(size))
+    sequential_time = time.time() - start_time
+
+    start_time = time.time()
+    matrix2 = np.array(initRandMatrixParallel(size))
+    parallel_time = time.time() - start_time
+
+    print(f"Matrix size: {size}x{size}")
+    print(f"Sequential time: {sequential_time:.4f} seconds")
+    print(f"Parallel time: {parallel_time:.4f} seconds")
+    print(f"Speedup: {sequential_time / parallel_time:.2f}x")
+    print()
 
 
+if __name__ == '__main__':
+    for size in [100, 500, 1000, 2000, 4000]:
+        compareImplementations(size)
