@@ -52,5 +52,5 @@ def compareImplementations(size):
 
 
 if __name__ == '__main__':
-    for size in [100, 500, 1000, 2000, 4000]:
+    for size in [100, 500, 1000, 2000, 4000, 11000]:
         compareImplementations(size)
