@@ -65,3 +65,7 @@ ENV/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Other directories
+oldMatrixImplementations/
+otherStuff/
