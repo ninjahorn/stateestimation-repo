@@ -73,7 +73,6 @@ func compareImplementations(size int) {
 	fmt.Printf("Speedup: %.2fx\n", sequentialTime/parallelTime)
 	fmt.Println()
 
-	// Prevent optimization from removing the generated matrices
 	_ = matrix1
 	_ = matrix2
 }
