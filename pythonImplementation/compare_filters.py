@@ -44,8 +44,8 @@ def scenario1_fixed_dimension():
 
 
 def scenario2_fixed_iterations():
-    fixed_iters = 2
-    dimension_values = [10, 15, 20, 1000]  # 4 dimension values
+    fixed_iters = 5
+    dimension_values = [10, 50, 100, 500]  # 4 dimension values
 
     fig, axes = plt.subplots(2, 2, figsize=(12, 8))
     fig.suptitle(f"Scenario 2: FIXED iterations={fixed_iters}, varying dimensions", fontsize=14)
@@ -82,5 +82,5 @@ def scenario2_fixed_iterations():
 
 
 if __name__ == "__main__":
-    # scenario1_fixed_dimension()
+    scenario1_fixed_dimension()
     scenario2_fixed_iterations()
