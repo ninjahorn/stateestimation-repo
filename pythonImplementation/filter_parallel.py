@@ -155,7 +155,7 @@ def plot_estimated_state(state_history):
     plt.ylabel("State Value")
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig("./parallelPlot/estimated_state.png")
 
 # Plotfunktion, um den Verlauf der Innovationsgröße α² zu visualisieren
 def plot_innovation(innovation_history):
@@ -165,23 +165,22 @@ def plot_innovation(innovation_history):
     plt.xlabel("Iteration")
     plt.ylabel("α²")
     plt.grid(True)
-    plt.show()
+    plt.savefig("./parallelPlot/innovation.png")
 
 # Plotfunktion, um den Verlauf der Diagonale der Kovarianzmatrix zu visualisieren
 def plot_covariance_diagonal(covariance_history):
-    arr = np.array(covariance_history)  # => (iterations, dimension)
+    arr = np.array(covariance_history)
     num_states = arr.shape[1]
 
     plt.figure(figsize=(12, 6))
     for i in range(num_states):
         plt.plot(arr[:, i], label=f'Variance of State {i+1}')
-    
     plt.title("Covariance Diagonal Over Time")
     plt.xlabel("Iteration")
     plt.ylabel("Variance")
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig("./parallelPlot/covariance.png")
 
 
 # =========== Filter Parallel ===========
@@ -275,17 +274,16 @@ def filter_parallel(dimension, iterations):
         print("------------------------------")
 
     # Plotten (Ende der Iterationen)
-    plot_estimated_state(state_history)
-    plot_innovation(alpha_history)
-    plot_covariance_diagonal(covariance_history)
+    # plot_estimated_state(state_history)
+    # plot_innovation(alpha_history)
+    # plot_covariance_diagonal(covariance_history)
 
     # Zurückgeben vom letzten Zustand dem letzten alpha^2
     return x, P, alpha_sq_current
 
-# Kurzer Test
-if __name__ == "__main__":
-    final_x, final_P, final_alpha = filter_parallel(dimension=10, iterations=10)
-    print("\n=== ENDERGEBNIS ===")
-    print("Finaler Zustand x:", final_x)
-    print("Diag von P:", [final_P[i][i] for i in range(4)])
-    print("Letztes alpha^2:", final_alpha)
+# if __name__ == "__main__":
+#     final_x, final_P, final_alpha = filter_parallel(dimension=8, iterations=50)
+#     print("\n=== ENDERGEBNIS ===")
+#     print("Finaler Zustand x:", final_x)
+#     print("Diag von P:", [final_P[i][i] for i in range(4)])
+#     print("Letztes alpha^2:", final_alpha)
