@@ -22,7 +22,7 @@ def plot_estimated_state(state_history):
     plt.ylabel('State Value')
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig("./sequentialNumpyPlot/estimated_state.png")
 
 # Darstellung der Innovationen (Messabweichungen)
 def plot_innovation(innovation_history):
@@ -33,7 +33,7 @@ def plot_innovation(innovation_history):
     plt.xlabel('Iteration')
     plt.ylabel('Innovation (α²)')
     plt.grid(True)
-    plt.show()
+    plt.savefig("./sequentialNumpyPlot/innovation.png")
 
 # Darstellung der Kovarianzmatrix (Messunsicherheit)
 def plot_covariance_diagonal(covariance_history):
@@ -49,7 +49,7 @@ def plot_covariance_diagonal(covariance_history):
     plt.ylabel('Variance')
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig("./sequentialNumpyPlot/covariance.png")
 
 # Implementierung des der Formeln für den Filter
 def filter_sequential(state_dim, measurement_dim, iterations):
@@ -113,5 +113,5 @@ def filter_sequential(state_dim, measurement_dim, iterations):
 # Test der Implementierung mit 8-dimensionalen Zuständen und Messungen bei 10 Iterationen (Variablen anpassbar)
 state_dim = 8
 measurement_dim = 8
-num_iterations = 10
+num_iterations = 50
 filter_sequential(state_dim, measurement_dim, num_iterations)
