@@ -14,7 +14,3 @@ Der Ordner "golangImplementation" enthält die "main.go" Datei, in der sich die 
    - Datei ausführen mit ```python <dateiname>.py```
 2. Golang
    - Datei ausführen mit ```go run main.go```
-  
-## TODO:
-- [ ] Strukur und Dateinamen aktualisieren
-- [ ] Benötigte Installationen wie numpy oder ähnliches hinzufügen
